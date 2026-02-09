@@ -1,0 +1,129 @@
+* {
+  font-family: Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+body {
+  margin: 0;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+  background: lightgray;
+}
+
+/* header */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+}
+
+/* card */
+.card {
+  background: white;
+  margin: 40px auto;
+  padding: 30px;
+  width: 80%;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* about */
+#about {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+#about img {
+  width: 120px;
+  border-radius: 50%;
+}
+
+/* button */
+button {
+  background: orange;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* skills */
+.skill {
+  margin: 15px 0;
+}
+
+.bar {
+  background: #ddd;
+  height: 10px;
+  border-radius: 10px;
+}
+
+.bar div {
+  background: orange;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* projects */
+.project-box {
+  display: flex;
+  gap: 20px;
+  background: transparent;
+}
+
+.project {
+  flex: 1;
+  background:  orange;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* contact */
+.contact-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social {
+  gap: 10px;
+  align-items: center;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  transition: 0.2s all ease-in-out;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+form {
+  flex: 1;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+form button {
+  width: 100%;
+}
