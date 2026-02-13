@@ -8,6 +8,8 @@
   </head>
 
   <body>
+    <div id="particles-js"></div>
+
     <!-- Header -->
     <header>
       <h1>About Me</h1>
@@ -99,50 +101,84 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="card">
-      <div class="contact-container">
-        <!-- Social -->
+<section id="contact" class="card">
+  <div class="contact-container">
+    <!-- Social -->
+    <div class="social">
+      <h2>Social</h2>
+      <a href="https://www.facebook.com/sabin.angol/" target="_blank">
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/facebook/facebook-plain.svg"
+          class="icon"
+          alt="Facebook"
+        />
+      </a>
 
-        <div class="social">
-          <h2>Social</h2>
-          <a href="https://www.facebook.com/sabin.angol/" target="_blank">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/facebook/facebook-plain.svg"
-              class="icon"
-              alt="Facebook"
-            />
-          </a>
+      <a href="https://www.instagram.com/sabin4863/" target="_blank">
+        <svg class="icon" viewBox="0 0 24 24">
+          <linearGradient id="ig" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#FFD600" />
+            <stop offset="50%" stop-color="#FF0100" />
+            <stop offset="100%" stop-color="#D800B9" />
+          </linearGradient>
+          <rect x="2" y="2" width="20" height="20" rx="5" fill="url(#ig)" />
+          <circle cx="12" cy="12" r="4" fill="#fff" />
+          <circle cx="17" cy="7" r="1.3" fill="#fff" />
+        </svg>
+      </a>
 
-          <a href="https://www.instagram.com/sabin4863/" target="_blank">
-            <svg class="icon" viewBox="0 0 24 24">
-              <linearGradient id="ig" x1="0%" y1="100%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#FFD600" />
-                <stop offset="50%" stop-color="#FF0100" />
-                <stop offset="100%" stop-color="#D800B9" />
-              </linearGradient>
-              <rect x="2" y="2" width="20" height="20" rx="5" fill="url(#ig)" />
-              <circle cx="12" cy="12" r="4" fill="#fff" />
-              <circle cx="17" cy="7" r="1.3" fill="#fff" />
-            </svg>
-          </a>
+      <a href="https://github.com/sabindangol121" target="_blank">
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+          alt="github"
+          class="icon"
+        />
+      </a>
+    </div>
 
-          <a href="https://github.com/sabindangol121" target="_blank">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
-              alt="github"
-              class="icon"
-            />
-          </a>
-        </div>
-      </div>
-      <!-- Form -->
-      <form>
-        <h2>Contact Me</h2>
-        <input type="text" placeholder="Name" required />
-        <input type="email" placeholder="Email" required />
-        <textarea placeholder="Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
+    <!-- Gmail Link Stylish -->
+    <div class="gmail-contact">
+      <h2>Contact Me</h2>
+      <a href="mailto:sabindangol33@gmail.com?subject=Hello&body=Hi Sabin" target="_blank">
+       
+        <span class="gmail-text">sabindangol33@gmail.com</span>
+      </a>
+    </div>
+  </div>
+</section>
+
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: {
+            value: 120,
+          },
+          color: {
+            value: "#ff4d6d",
+          },
+          shape: {
+            type: "circle",
+          },
+          opacity: {
+            value: 0.6,
+          },
+          size: {
+            value: 2,
+          },
+          move: {
+            enable: true,
+            speed: 1.7,
+            direction: "bottom", // 👈 THIS MAKES RAIN
+            straight: true,
+          },
+          line_linked: {
+            enable: false, // rain ma lines band
+          },
+        },
+      });
+    </script>
   </body>
 </html>

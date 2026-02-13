@@ -1,63 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
 * {
-  font-family: "Segoe UI", Roboto, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
-  scrollbar-width: thin;
 }
+
+/* PARTICLES BACKGROUND */
+
+#particles-js {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+/* BODY */
 
 body {
-  margin: 0;
+  background: radial-gradient(circle at top, #0e1b1b, #050505);
+  color: #e6f1f1;
   padding: 40px 20px;
-  background-color: #0f0f0f; /* Deep matte black */
-  color: #e0e0e0;
 }
 
-/* Header & Nav */
+/* HEADER */
+
 header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 70px;
 }
 
 header h1 {
-  font-size: 2.5rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: rgb(27, 114, 114);
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #3fe0d0;
 }
 
 nav a {
   margin: 0 15px;
   text-decoration: none;
+  color: #aaa;
   font-weight: 500;
-  color: #bbb;
-  transition: color 0.3s ease;
+  transition: 0.3s;
 }
 
 nav a:hover {
-  color: rgb(27, 114, 114);
+  color: #3fe0d0;
 }
 
-/* Glassmorphism Card Style */
+/* GLASS CARD */
+
 .card {
-  background: #1a1a1a;
-  margin: 40px auto;
-  padding: 40px;
-  width: 100%;
-  max-width: 850px;
-  border-radius: 16px;
-  border: 1px solid #333;
-  box-shadow: 0 10px 30px rgb(27, 114, 114);
-  transition: transform 0.3s ease;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  margin: 50px auto;
+  padding: 45px;
+  max-width: 900px;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+  transition: 0.4s;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  border-color: #444;
+  transform: translateY(-6px);
 }
 
-/* About Section */
+/* ABOUT */
+
 #about {
   display: flex;
   gap: 30px;
@@ -68,37 +83,57 @@ nav a:hover {
 #about img {
   width: 150px;
   height: 150px;
-  object-fit: cover;
   border-radius: 50%;
-  border: 3px solid rgb(27, 114, 114);
-  padding: 5px;
+  border: 3px solid #3fe0d0;
 }
 
-/* Skills Section */
+/* SKILLS */
+
 .skill {
-  margin: 20px 0;
+  margin: 25px 0;
 }
 
 .skill span {
+  font-weight: 600;
   display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .bar {
-  background: #333;
+  background: #222;
   height: 8px;
-  border-radius: 10px;
-  overflow: hidden;
+  border-radius: 20px;
 }
 
 .bar div {
-  background: linear-gradient(90deg, rgb(27, 114, 114), rgb(27, 114, 114));
   height: 100%;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255, 165, 0, 0.3);
+  border-radius: 20px;
+  background: linear-gradient(90deg, #3fe0d0, #00aaff);
 }
 
+/* PROJECTS */
+
+.project {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 30px;
+  border-radius: 18px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: 0.4s;
+}
+
+.project:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.project h3 {
+  color: #3fe0d0;
+}
+
+.project p {
+  color: #aaa;
+}
 /* Project Grid */
 /* Project Link Wrapper */
 .project-link {
@@ -147,63 +182,78 @@ nav a:hover {
   color: rgb(27, 114, 114);
 }
 
-/* Contact & Form */
 .contact-container {
   display: flex;
-  gap: 40px;
+  gap: 50px; /* space between social and contact */
   flex-wrap: wrap;
+  justify-content: center; /* center horizontally if space is bigger */
+  align-items: flex-start;
 }
 
-form {
-  flex: 2;
-}
-
-form input,
-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  background: #252525;
-  border: 1px solid #444;
-  color: white;
-  border-radius: 8px;
-  outline: none;
-}
-
-form input:focus,
-form textarea:focus {
-  border-color: rgb(27, 114, 114);
-}
-
-button {
-  background: rgb(27, 114, 114);
-  color: black;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: opacity 0.3s ease;
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
+/* Social icons container */
 .social {
   flex: 1;
-  min-width: 150px;
+  min-width: 200px;
 }
+
+.social h2 {
+  margin-bottom: 15px;
+  color: rgb(27, 114, 114);
+}
+
+/* Gmail/contact container */
+.gmail-contact {
+  flex: 1;
+  min-width: 200px;
+}
+
+.gmail-contact h2 {
+  margin-bottom: 15px;
+}
+
+/* Gmail link styling */
+.gmail-contact a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #e6f1f1;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.gmail-contact a:hover {
+  color: #3fe0d0;
+}
+
+.gmail-icon {
+  width: 35px;
+  height: 35px;
+}
+
+.gmail-contact .gmail-text {
+  color: burlywood;
+}
+
+.gmail-contact a:hover .gmail-text {
+  color: #3fe0d0;
+}
+
+.gmail-contact h2 {
+  color: rgb(27, 114, 114);
+}
+/* SOCIAL */
 
 .icon {
   width: 35px;
-  height: 35px;
+
   margin-right: 15px;
-  filter: grayscale(1) invert(1); /* Makes colored icons look sleek in dark mode */
+  height: 35px;
+  filter: grayscale(1) invert(1);
   transition: 0.3s;
 }
 
 .icon:hover {
-  filter: grayscale(0) invert(0);
-  transform: translateY(-3px);
+  transform: translateY(-4px);
+  filter: none;
 }
