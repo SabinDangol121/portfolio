@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object</title>
+  </head>
+  <body>
+    <script>
+      const car = {
+        make: "Toyota",
+        model: prompt("Enter car model:"),
+        year: 2020,
+        color: "blue",
+      };
+
+      car.owner = prompt("Enter car owner:");
+      delete car.year;
+
+      alert("Car name : " + car.make);
+      alert("Car Model : " + car.model);
+      alert("Car Year : " + car.year);
+      alert("Car Color : " + car.color);
+      alert("Car Owner : " + car.owner);
+    </script>
+  </body>
+</html>
